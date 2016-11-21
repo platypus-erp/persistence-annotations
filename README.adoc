@@ -1,0 +1,42 @@
+:sectnums:
+:experimental:
+= Persistence Annotation
+
+==== Persistence Annotation Processor
+
+This project is still under **BETA** so possible radical change can be pushed
+
+====== The project is not on maven repo so to use it you need to clone this repo and run ```mvn clean install```
+This repository contains all the Java Annotation needed for the platypus framework persistence layer.
+
+All the annotation are used in the repository [persistence-annotation-processor](https://github.com/platypus-erp/persistence-annotation-processor)
+
+All annotation are not yet supported by the processor [processor Roadmap](https://github.com/platypus-erp/persistence-annotation-processor)
+
+All Annotation with a quick definition
+
+//org.platypus.framework.persistence
+== @PlatypusModel
+=== How to use @PlatypusModel
+
+[source, java, numbered]
+----
+package org.platypus.sample;
+
+import org.platypus.framework.persistence.model.BaseModel;# <2>
+import org.platypus.framework.persistence.model.PlatypusModel;# <1>
+
+@PlatypusModel("model_name")# <1>
+public class MyModel implements BaseModel { # <2>
+# <3>
+}
+----
+<1> @PlatypusModel accept only one required parameter. +
+The parameter is the name of the Table in your database provider
+The model name can only contains **letter** or **-** or **_**
+
+<2> Each class annotate with @PlatypusModel should implement **BaseModel**
+
+<3> Field of you model will be here
+
+include::src/main/resources/doc/field_def.adoc[]

@@ -1,0 +1,55 @@
+== Field
+=== Sample
+[source, java, numbered]
+----
+package org.platypus.sample;
+
+import org.platypus.framework.persistence.model.BaseModel;
+import org.platypus.framework.persistence.model.PlatypusModel;
+import org.platypus.framework.persistence.model.fields.basic.def.*; # <2>
+
+@PlatypusModel("model_string") # <1>
+public class MyModel implements BaseModel{ # <1>
+
+    @XXXFieldDefinition # <3>
+    private YYYYField myField; # <4>
+}
+----
+
+Let's take a look at this peace of code.
+
+<1> A field is declared in a platypus model
+
+<2> All the field definition are in the package +
+org.platypus.framework.persistence.model.fields.__YYY__.def.*;
+
+<3> ```@XXXFieldDefinition``` +
+The _XXX_ will be replace by a real annotation name +
+The definition of the field is set with this annotation +
+The annotation has many option explain below for each one
+
+<4> ```private YYYYField myField``` +
+Each part of this line of code is important. +
+A field is always *private* +
+A field can only be of the type +
+-> __Basic__Field +
+-> __Relation__Field +
+-> __Special__Field +
+-> __Computed__Field +
+Each type of field is explain below +
+The field name (here ```myField```) is the name of the column in the Table +
+The column name in this case is my_field according to the sneak_case convention
+
+include::string_field_def.adoc[]
+
+include::boolean_field_def.adoc[]
+
+include::date_field_def.adoc[]
+
+include::date_time_field_def.adoc[]
+
+include::time_field_def.adoc[]
+
+include::float_field_def.adoc[]
+
+include::int_field_def.adoc[]

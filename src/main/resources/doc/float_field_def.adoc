@@ -1,0 +1,79 @@
+=== @FloatFieldDefinition
+.Sample
+[source, java, numbered]
+----
+package org.platypus.sample;
+
+import org.platypus.framework.persistence.model.BaseModel;
+import org.platypus.framework.persistence.model.PlatypusModel;
+import org.platypus.framework.persistence.model.fields.basic.def.BasicField;
+import org.platypus.framework.persistence.model.fields.basic.def.FloatFieldDefinition;
+
+@PlatypusModel("my_model")
+public class MyModel implements BaseModel{
+
+    @FloatFieldDefinition # <1>
+    private BasicField field; # <2>
+}
+----
+
+.Quick doc of @FloatFieldDefinition
+[cols="1,1,1,1,9",options="header"]
+|===
+|Type |Name  |Required |Default value |Quick def
+
+|Bool
+|insertable
+|False
+|true
+|If this colomn can be inserted in the DB
+
+|Bool
+|updatable
+|False
+|true
+|If this colomn can be updated
+
+|String
+|columnDoc
+|False
+|None
+|The documentation in DB
+
+|String
+|uniqueHint
+|False
+|None
+|Create a unique constraint if set,
+same hint will be used to generate multiple unique constraint
+
+|boolean
+|eraseWithYours
+|False
+|-
+|Erase previous definition of this field with you definition
+
+|float
+|max
+|False
+|None
+|The max of the field
+
+|float
+|min
+|False
+|None
+|The min of the field
+
+|Bool
+|required
+|False
+|None
+|Constraint if this field can be unset
+
+|float
+|defaultValue
+|False
+|None
+|The default value if unset (only apply before insert)
+|===

@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+*.class
+/target
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Sensitive or high-churn files:
+.idea/*
+.idea
+*.iml
+nb-configuration.xml
+
+out/
