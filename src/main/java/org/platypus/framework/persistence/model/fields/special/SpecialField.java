@@ -1,4 +1,4 @@
-package org.platypus.framework.persistence.model.fields.other;
+package org.platypus.framework.persistence.model.fields.special;
 
 import org.platypus.framework.persistence.Record;
 
@@ -13,5 +13,5 @@ import java.util.function.Consumer;
  * @since 0.1
  */
 @FunctionalInterface
-public interface ComputedField<R extends Record> extends Consumer<R> {
+public interface SpecialField<R extends Record> extends Consumer<R> {
 }

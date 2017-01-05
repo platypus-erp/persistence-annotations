@@ -1,4 +1,4 @@
-=== @DateFieldDefinition
+=== @DecimalFieldDefinition
 .Sample
 [source, java, numbered]
 ----
@@ -6,18 +6,18 @@ package org.platypus.sample;
 
 import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.PlatypusModel;
-import org.platypus.framework.persistence.model.fields.basic.def.BasicField;
-import org.platypus.framework.persistence.model.fields.basic.def.DateFieldDefinition;
+import org.platypus.framework.persistence.model.fields.basic.BasicField;
+import org.platypus.framework.persistence.model.fields.basic.def.DecimalFieldDefinition;
 
 @PlatypusModel("my_model")
 public class MyModel implements BaseModel{
 
-    @DateFieldDefinition # <1>
+    @DecimalFieldDefinition # <1>
     private BasicField field; # <2>
 }
 ----
 
-.Quick doc of @DateFieldDefinition
+.Quick doc of @IntFieldDefinition
 [cols="1,1,1,1,9",options="header"]
 |===
 |Type |Name  |Required |Default value |Quick def
@@ -26,13 +26,13 @@ public class MyModel implements BaseModel{
 |insertable
 |False
 |true
-|If this colomn can be inserted in the DB
+|If this column can be inserted in the DB
 
 |Bool
 |updatable
 |False
 |true
-|If this colomn can be updated
+|If this column can be updated
 
 |String
 |columnDoc
@@ -51,7 +51,19 @@ same hint will be used to generate multiple unique constraint
 |eraseWithYours
 |False
 |-
-|Erase previous definition of this field with you definition
+|Erase previous definition of this field with your definition
+
+|float
+|max
+|False
+|None
+|The max of the field
+
+|float
+|min
+|False
+|None
+|The min of the field
 
 |Bool
 |required
@@ -60,14 +72,14 @@ same hint will be used to generate multiple unique constraint
 |Constraint if this field can be unset
 
 |Bool
-|defaultToday
+|readonly
 |False
 |None
-|The default value will be today if unset (only apply before insert)
+|Constraint if the value of this field can be change
 
-|DateTimeRelative
-|relative
+|String
+|defaultValue
 |False
 |None
-|A constraint on the date checked before the insert
+|The default value if unset (only apply before insert)
 |===

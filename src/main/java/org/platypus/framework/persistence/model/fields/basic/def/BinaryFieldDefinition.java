@@ -10,7 +10,7 @@ import org.platypus.framework.persistence.model.fields.Bool;
  * @version 0.1
  * @since 0.1
  */
-public @interface BooleanFieldDefinition {
+public @interface BinaryFieldDefinition {
     String DEFAULT = "__DEFAULT__VALUE__";
 
     /**
@@ -35,16 +35,6 @@ public @interface BooleanFieldDefinition {
     String columnDoc() default DEFAULT;
 
     /**
-     * (Optional) <br> If the this column will be unique,<br>
-     * if an another field use the same hint(case insensitive)<br>
-     * the the SQL Unique constraint will be above the two column<br>
-     * The Unique constraint name will be UK_<target>_<hint> (ex :  UK_PARTNER_EMAIL)<br>
-     * <bold>Warning</bold> if the default value is the same for all same hint value a compile error will be throw<br>
-     * To erase the unique constraint set the hint to <code>""</code><br>
-     */
-    String uniqueHint() default DEFAULT;
-
-    /**
      * (Optional) <br> Only if you want to erase all the definition of this field defined in other module
      */
     boolean eraseWithYours() default false;
@@ -60,8 +50,7 @@ public @interface BooleanFieldDefinition {
     Bool readonly() default Bool.DEFAULT;
 
     /**
-     * (Optional) <br>
-     * The default value, only set before the persist or update of the model
+     * (Optional) <br> Define if this field is load lazily or not
      */
-    Bool defaultValue() default Bool.DEFAULT;
+    Bool lazy() default Bool.DEFAULT;
 }

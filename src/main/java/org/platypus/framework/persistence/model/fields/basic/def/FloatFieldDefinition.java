@@ -44,7 +44,16 @@ public @interface FloatFieldDefinition {
      */
     boolean eraseWithYours() default false;
 
+    /**
+     * (Optional) <br> Define if this field can be <code>null</code> when the model is inserted or updated
+     */
     Bool required() default Bool.DEFAULT;
+
+    /**
+     * (Optional) <br> Define if the value of this field can be change
+     */
+    Bool readonly() default Bool.DEFAULT;
+
     float defaultValue() default Float.MIN_VALUE;
     float min() default Float.MIN_VALUE;
     float max() default Float.MIN_VALUE;

@@ -9,8 +9,8 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface BooleanField {
-
-    boolean get();
+public interface BooleanField extends UnmutableBooleanField{
     void set(boolean value);
+
+
 }

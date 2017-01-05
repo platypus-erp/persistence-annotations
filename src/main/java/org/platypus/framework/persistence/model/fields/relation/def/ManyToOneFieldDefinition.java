@@ -4,17 +4,16 @@ import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.fields.Bool;
 
 /**
- * Copy of {@linkplain javax.persistence.ManyToOne @ManyToOne}
- * Used to generate Entity class for the platypus framework
- *
  * @author Alexis PASQUIER
- * @author Alexandre SALAUN
  * @version 0.1
  * @since 0.1
  */
 public @interface ManyToOneFieldDefinition {
     String DEFAULT = "__DEFAULT__VALUE__";
 
+    /**
+     * The target Platypus model for the relation
+     */
     Class<? extends BaseModel> value();
 
     /**
@@ -26,9 +25,27 @@ public @interface ManyToOneFieldDefinition {
     PlatypusCascadeType[] cascade() default {};
 
     /**
-     * (Optional) a where clause add to the relation
+     * (Optional) a where predicate add to the query when the relation is fetched
      */
     String where() default DEFAULT;
 
+    /**
+     * (Optional) an <code>ORDER BY "field_name" ASC</code> clause add to the query when the relation is fetched
+     */
+    String sortAsc() default DEFAULT;
+
+    /**
+     * (Optional) an <code>ORDER BY "field_name" DESC</code> clause add to the query when the relation is fetched
+     */
+    String sortDesc() default DEFAULT;
+
+    /**
+     * (Optional) Define if the field can be <code>null</code>
+     */
     Bool required() default Bool.DEFAULT;
+
+    /**
+     * (Optional) <br> Define if a new relation can be add or if the existing relation can be removed
+     */
+    Bool readonly() default Bool.DEFAULT;
 }

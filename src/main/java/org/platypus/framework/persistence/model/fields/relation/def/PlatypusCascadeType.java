@@ -6,7 +6,7 @@ package org.platypus.framework.persistence.model.fields.relation.def;
  * The value <code>cascade=ALL</code> is equivalent to
  * <code>cascade={PERSIST, MERGE, REMOVE, REFRESH, DETACH}</code>.
  *
- * @since Java Persistence 1.0
+ * @since 1.0
  */
 public enum PlatypusCascadeType {
     /**

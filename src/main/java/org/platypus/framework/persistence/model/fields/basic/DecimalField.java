@@ -1,6 +1,6 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
-import java.time.LocalDate;
+import java.math.BigDecimal;
 
 /**
  * TODO Add JavaDoc
@@ -10,8 +10,8 @@ import java.time.LocalDate;
  * @version 0.1
  * @since 0.1
  */
-public interface DecimalField {
+public interface DecimalField extends UnmutableDecimalField{
 
-    LocalDate get();
-    void set(LocalDate date);
+
+    void set(BigDecimal date);
 }

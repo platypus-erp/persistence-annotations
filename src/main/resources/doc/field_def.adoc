@@ -35,21 +35,32 @@ A field can only be of the type +
 -> __Basic__Field +
 -> __Relation__Field +
 -> __Special__Field +
--> __Computed__Field +
+-> __Shortcut__Field +
 Each type of field is explain below +
 The field name (here ```myField```) is the name of the column in the Table +
 The column name in this case is my_field according to the sneak_case convention
 
-include::string_field_def.adoc[]
+== Basic Field
+include::field/string_field_def.adoc[]
 
-include::boolean_field_def.adoc[]
+include::field/boolean_field_def.adoc[]
 
-include::date_field_def.adoc[]
+include::field/date_field_def.adoc[]
 
-include::date_time_field_def.adoc[]
+include::field/date_time_field_def.adoc[]
 
-include::time_field_def.adoc[]
+include::field/time_field_def.adoc[]
 
-include::float_field_def.adoc[]
+include::field/float_field_def.adoc[]
 
-include::int_field_def.adoc[]
+include::field/int_field_def.adoc[]
+
+== Relation Field
+
+include::field/oto_field_def.adoc[]
+
+include::field/otm_field_def.adoc[]
+
+include::field/mto_field_def.adoc[]
+
+include::field/mtm_field_def.adoc[]

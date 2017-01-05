@@ -1,7 +1,5 @@
 package org.platypus.framework.persistence.model.fields;
 
-import org.platypus.framework.persistence.model.BaseModel;
-
 /**
  * TODO Add JavaDoc
  *
@@ -10,10 +8,14 @@ import org.platypus.framework.persistence.model.BaseModel;
  * @version 0.1
  * @since 0.1
  */
-public interface Field<E extends BaseModel, T> {
+public interface Field {
 
+    String getDeclaringName();
+    String getSqlName();
+    FieldType getFieldType();
 
-    void set(T value);
-    T get();
+    enum FieldType {
+        BASIC,RELATION,SHORTCUT,SPECIAL
+    }
 
 }

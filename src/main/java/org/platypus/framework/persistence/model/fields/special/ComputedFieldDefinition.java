@@ -1,5 +1,4 @@
-package org.platypus.framework.persistence.model.fields.other;
-
+package org.platypus.framework.persistence.model.fields.special;
 
 import org.platypus.framework.persistence.model.fields.Bool;
 
@@ -11,14 +10,7 @@ import org.platypus.framework.persistence.model.fields.Bool;
  * @version 0.1
  * @since 0.1
  */
-public @interface RelatedFieldDefinition {
-
-    /**
-     * The path to the value
-     */
-    String[] value();
-
+public @interface ComputedFieldDefinition {
     Bool store() default Bool.DEFAULT;
 
-    Bool readonly() default Bool.DEFAULT;
 }

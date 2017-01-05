@@ -44,7 +44,16 @@ public @interface IntFieldDefinition {
      */
     boolean eraseWithYours() default false;
 
+    /**
+     * (Optional) <br> Define if this field can be <code>null</code> when the model is inserted or updated
+     */
     Bool required() default Bool.DEFAULT;
+
+    /**
+     * (Optional) <br> Define if the value of this field can be change
+     */
+    Bool readonly() default Bool.DEFAULT;
+
     int defaultValue() default Integer.MIN_VALUE;
     int min() default Integer.MIN_VALUE;
     int max() default Integer.MAX_VALUE;

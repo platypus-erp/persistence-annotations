@@ -8,8 +8,7 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface FloatField {
-    int get();
+public interface FloatField extends UnmutableFloatField{
 
-    void set(int value);
+    void set(float value);
 }

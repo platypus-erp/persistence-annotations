@@ -10,8 +10,7 @@ import java.time.LocalDate;
  * @version 0.1
  * @since 0.1
  */
-public interface DateField {
+public interface DateField extends UnmutableDateField{
 
-    LocalDate get();
     void set(LocalDate date);
 }

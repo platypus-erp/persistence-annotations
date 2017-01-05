@@ -4,18 +4,17 @@ import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.fields.Bool;
 
 /**
- * Copy of {@linkplain javax.persistence.OneToOne @OneToOne}
- * Used to generate Entity class for the platypus framework
- *
  * @author Alexis PASQUIER
- * @author Alexandre SALAUN
  * @version 0.1
  * @since 0.1
  */
 public @interface OneToOneFieldDefinition {
-    String DEFAULT = "__DEFAULT__VALUE__";
 
+    /**
+     * The target Platypus model for the relation
+     */
     Class<? extends BaseModel> value();
+
     /**
      * (Optional) The operations that must be cascaded to
      * the target of the association.
@@ -25,10 +24,13 @@ public @interface OneToOneFieldDefinition {
     PlatypusCascadeType[] cascade() default PlatypusCascadeType.DEFAULT;
 
     /**
-     * (Optional) a where clause add to the relation
+     * (Optional) Define if the field can be <code>null</code>
      */
-    String where() default DEFAULT;
-
     Bool required() default Bool.DEFAULT;
+
+    /**
+     * (Optional) <br> Define if a new relation can be add or if the existing relation can be removed
+     */
+    Bool readonly() default Bool.DEFAULT;
 
 }

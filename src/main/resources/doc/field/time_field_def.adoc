@@ -1,4 +1,4 @@
-=== @IntFieldDefinition
+=== @TimeFieldDefinition
 .Sample
 [source, java, numbered]
 ----
@@ -6,18 +6,18 @@ package org.platypus.sample;
 
 import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.PlatypusModel;
-import org.platypus.framework.persistence.model.fields.basic.def.BasicField;
-import org.platypus.framework.persistence.model.fields.basic.def.IntFieldDefinition;
+import org.platypus.framework.persistence.model.fields.basic.BasicField;
+import org.platypus.framework.persistence.model.fields.basic.def.TimeFieldDefinition;
 
 @PlatypusModel("my_model")
 public class MyModel implements BaseModel{
 
-    @IntFieldDefinition # <1>
+    @TimeFieldDefinition # <1>
     private BasicField field; # <2>
 }
 ----
 
-.Quick doc of @IntFieldDefinition
+.Quick doc of @TimeFieldDefinition
 [cols="1,1,1,1,9",options="header"]
 |===
 |Type |Name  |Required |Default value |Quick def
@@ -26,13 +26,13 @@ public class MyModel implements BaseModel{
 |insertable
 |False
 |true
-|If this colomn can be inserted in the DB
+|If this column can be inserted in the DB
 
 |Bool
 |updatable
 |False
 |true
-|If this colomn can be updated
+|If this column can be updated
 
 |String
 |columnDoc
@@ -51,19 +51,7 @@ same hint will be used to generate multiple unique constraint
 |eraseWithYours
 |False
 |-
-|Erase previous definition of this field with you definition
-
-|int
-|max
-|False
-|None
-|The max of the field
-
-|int
-|min
-|False
-|None
-|The min of the field
+|Erase previous definition of this field with your definition
 
 |Bool
 |required
@@ -71,9 +59,21 @@ same hint will be used to generate multiple unique constraint
 |None
 |Constraint if this field can be unset
 
-|int
-|defaultValue
+|Bool
+|readonly
 |False
 |None
-|The default value if unset (only apply before insert)
+|Constraint if the value of this field can be change
+
+|Bool
+|defaultNow
+|False
+|None
+|The default value will be now if unset (the value will be set before insert)
+
+|DateTimeRelative
+|relative
+|False
+|None
+|A constraint on the date checked before the insert
 |===

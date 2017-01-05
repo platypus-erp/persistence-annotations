@@ -8,8 +8,8 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface IntField {
-    int get();
+public interface IntField extends UnmutableIntField{
+
 
     void set(int value);
 }

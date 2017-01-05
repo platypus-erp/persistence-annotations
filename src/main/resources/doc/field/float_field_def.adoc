@@ -1,4 +1,4 @@
-=== @StringFieldDefinition
+=== @FloatFieldDefinition
 .Sample
 [source, java, numbered]
 ----
@@ -6,18 +6,18 @@ package org.platypus.sample;
 
 import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.PlatypusModel;
-import org.platypus.framework.persistence.model.fields.basic.def.BasicField;
-import org.platypus.framework.persistence.model.fields.basic.def.StringFieldDefinition;
+import org.platypus.framework.persistence.model.fields.basic.BasicField;
+import org.platypus.framework.persistence.model.fields.basic.def.FloatFieldDefinition;
 
 @PlatypusModel("my_model")
 public class MyModel implements BaseModel{
 
-    @StringFieldDefinition # <1>
+    @FloatFieldDefinition # <1>
     private BasicField field; # <2>
 }
 ----
 
-.Quick doc of @StringFieldDefinition
+.Quick doc of @FloatFieldDefinition
 [cols="1,1,1,1,9",options="header"]
 |===
 |Type |Name  |Required |Default value |Quick def
@@ -26,13 +26,13 @@ public class MyModel implements BaseModel{
 |insertable
 |False
 |true
-|If this colomn can be inserted in the DB
+|If this column can be inserted in the DB
 
 |Bool
 |updatable
 |False
 |true
-|If this colomn can be updated
+|If this column can be updated
 
 |String
 |columnDoc
@@ -51,40 +51,33 @@ same hint will be used to generate multiple unique constraint
 |eraseWithYours
 |False
 |-
-|Erase previous definition of this field with you definition
+|Erase previous definition of this field with your definition
 
-|int
-|maxSize
-|False
-|255
-|The max size of the field
-
-|int
-|minSize
+|float
+|max
 |False
 |None
-|The min size of the field
+|The max of the field
 
-|RequiredType
+|float
+|min
+|False
+|None
+|The min of the field
+
+|Bool
 |required
 |False
 |None
-|Constraint if this field can be unset, set with blank string (ex: "  ")
-or should contains at least on letter
+|Constraint if this field can be unset
 
-|String
-|match
+|Bool
+|readonly
 |False
 |None
-|The field should be match this regex
+|Constraint if the value of this field can be change
 
-|RemoveSpaceType
-|removeSpace
-|False
-|None
-|If the space should be remove and how
-
-|String
+|float
 |defaultValue
 |False
 |None

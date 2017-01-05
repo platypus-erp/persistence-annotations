@@ -1,4 +1,4 @@
-package org.platypus.framework.persistence.model.fields.buildin;
+package org.platypus.framework.persistence.model.fields.shortcut;
 
 /**
  * TODO Add JavaDoc
@@ -8,5 +8,5 @@ package org.platypus.framework.persistence.model.fields.buildin;
  * @version 0.1
  * @since 0.1
  */
-public @interface BigStringFieldDefinition {
+public interface UserFieldDefinition {
 }

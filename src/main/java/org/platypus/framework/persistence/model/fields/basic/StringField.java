@@ -1,8 +1,6 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
 
-import org.platypus.framework.persistence.EmptyCheckable;
-
 /**
  * TODO Add JavaDoc
  *
@@ -11,8 +9,8 @@ import org.platypus.framework.persistence.EmptyCheckable;
  * @version 0.1
  * @since 0.1
  */
-public interface StringField extends CharSequence, EmptyCheckable {
+public interface StringField extends UnmutableStringField {
 
-    void set(java.lang.String value);
-    java.lang.String get();
+    void set(String value);
+
 }
