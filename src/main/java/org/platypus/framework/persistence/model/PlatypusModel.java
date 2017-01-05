@@ -35,7 +35,6 @@ package org.platypus.framework.persistence.model;
  * For JPA annotation see {@linkplain javax.persistence.Entity @Entity} and {@linkplain javax.persistence.Table @Table}
  *
  * @author Alexis PASQUIER
- * @author Alexandre SALAUN
  * @version 0.1
  * @since 0.1
  */
