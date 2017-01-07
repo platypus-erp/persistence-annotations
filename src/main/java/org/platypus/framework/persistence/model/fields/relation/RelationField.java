@@ -17,5 +17,10 @@ public interface RelationField<T extends BaseModel> extends Field {
         return FieldType.RELATION;
     }
 
+    RelationType getRelationType();
     Class<T> getTarget();
+
+    enum RelationType {
+        ONE_TO_ONE,ONE_TO_MANY,MANY_TO_MANY,MANY_TO_ONE
+    }
 }

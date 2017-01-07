@@ -1,4 +1,4 @@
-package org.platypus.framework.persistence.model.fields.shortcut;
+package org.platypus.framework.persistence.model.fields.beta.expert.shortcut.def;
 
 /**
  * TODO Add JavaDoc
