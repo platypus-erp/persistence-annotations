@@ -1,7 +1,5 @@
-package org.platypus.framework.persistence.model.fields.special;
+package org.platypus.framework.persistence.model.fields;
 
-
-import org.platypus.framework.persistence.model.fields.Bool;
 
 /**
  * TODO Add JavaDoc

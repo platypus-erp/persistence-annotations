@@ -12,5 +12,9 @@ import java.util.function.Consumer;
  * @since 0.1
  */
 @FunctionalInterface
-public interface SpecialField<R extends Record> extends Consumer<R> {
+public interface ComputedField<R extends Record> extends Consumer<R> {
+
+    default void inverse(Consumer<R> inversFunction){
+
+    }
 }
