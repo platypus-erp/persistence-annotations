@@ -64,7 +64,7 @@ public @interface StringFieldDefinition {
     /**
      * (Optional) <br> Define if this field can be <code>null</code> when the model is inserted or updated
      */
-    Bool required() default Bool.DEFAULT;
+    RequiredType required() default RequiredType.NONE;
 
     /**
      * (Optional) <br> Define if the value of this field can be change
