@@ -9,6 +9,6 @@ import java.time.LocalDate;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableDateField extends BasicField{
+public interface UnmutableDateField {
     LocalDate get();
 }

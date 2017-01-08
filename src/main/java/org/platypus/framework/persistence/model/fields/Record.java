@@ -1,4 +1,4 @@
-package org.platypus.framework.persistence;
+package org.platypus.framework.persistence.model.fields;
 
 
 import org.platypus.framework.persistence.model.fields.basic.DateTimeField;

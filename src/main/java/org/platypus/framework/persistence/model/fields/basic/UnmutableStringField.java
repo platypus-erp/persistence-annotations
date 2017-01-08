@@ -7,6 +7,6 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableStringField extends BasicField{
+public interface UnmutableStringField {
     String get();
 }

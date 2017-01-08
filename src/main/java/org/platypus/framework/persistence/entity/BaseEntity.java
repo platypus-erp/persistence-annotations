@@ -1,6 +1,6 @@
 package org.platypus.framework.persistence.entity;
 
-import org.platypus.framework.persistence.Record;
+import org.platypus.framework.persistence.model.fields.Record;
 
 import java.time.LocalDateTime;
 

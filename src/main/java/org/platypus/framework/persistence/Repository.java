@@ -1,6 +1,8 @@
 package org.platypus.framework.persistence;
 
 
+import org.platypus.framework.persistence.model.fields.Record;
+
 import javax.validation.constraints.NotNull;
 import java.util.List;
 

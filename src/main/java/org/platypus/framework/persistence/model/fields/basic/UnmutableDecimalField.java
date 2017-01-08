@@ -9,6 +9,6 @@ import java.math.BigDecimal;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableDecimalField extends BasicField{
+public interface UnmutableDecimalField {
     BigDecimal get();
 }

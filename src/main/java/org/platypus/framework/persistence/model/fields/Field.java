@@ -14,7 +14,7 @@ public interface Field {
     FieldType getFieldType();
 
     enum FieldType {
-        BASIC,RELATION,SHORTCUT,SPECIAL
+        BASIC,RELATION
     }
 
 }

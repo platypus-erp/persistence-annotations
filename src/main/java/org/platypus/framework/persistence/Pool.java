@@ -1,5 +1,7 @@
 package org.platypus.framework.persistence;
 
+import org.platypus.framework.persistence.model.fields.Record;
+
 /**
  * TODO Add JavaDoc
  *
