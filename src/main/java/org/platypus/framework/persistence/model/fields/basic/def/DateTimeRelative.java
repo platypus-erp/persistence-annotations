@@ -9,5 +9,5 @@ package org.platypus.framework.persistence.model.fields.basic.def;
  * @since 0.1
  */
 public enum DateTimeRelative {
-    NONE,FUTURE, PAST, FUTURE_TODAY, PAST_TODAY;
+    NONE,FUTURE, PAST, FUTURE_TODAY, PAST_TODAY
 }

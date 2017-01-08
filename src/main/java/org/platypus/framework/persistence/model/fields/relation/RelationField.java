@@ -1,6 +1,6 @@
 package org.platypus.framework.persistence.model.fields.relation;
 
-import org.platypus.framework.persistence.model.BaseModel;
+import org.platypus.framework.persistence.Record;
 import org.platypus.framework.persistence.model.fields.Field;
 
 /**
@@ -11,7 +11,7 @@ import org.platypus.framework.persistence.model.fields.Field;
  * @version 0.1
  * @since 0.1
  */
-public interface RelationField<T extends BaseModel> extends Field {
+public interface RelationField<T extends Record> extends Field {
     @Override
     default FieldType getFieldType() {
         return FieldType.RELATION;

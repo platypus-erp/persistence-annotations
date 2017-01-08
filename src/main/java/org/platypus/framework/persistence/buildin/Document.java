@@ -3,7 +3,7 @@ package org.platypus.framework.persistence.buildin;
 import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.PlatypusModel;
 import org.platypus.framework.persistence.model.fields.Bool;
-import org.platypus.framework.persistence.model.fields.basic.BasicField;
+import org.platypus.framework.persistence.model.fields.Field;
 import org.platypus.framework.persistence.model.fields.basic.def.BinaryFieldDefinition;
 import org.platypus.framework.persistence.model.fields.basic.def.StringFieldDefinition;
 
@@ -25,18 +25,18 @@ public class Document implements BaseModel {
             uniqueHint = HINT_DOCUMENT_NAME,
             required = StringFieldDefinition.RequiredType.NOT_BLANK
     )
-    private BasicField name;
+    private Field name;
 
     @StringFieldDefinition(
             columnDoc = "the mime type of the file",
             required = StringFieldDefinition.RequiredType.NOT_BLANK
     )
-    private BasicField mimeType;
+    private Field mimeType;
 
     @BinaryFieldDefinition(
             columnDoc = "the file",
             lazy = Bool.TRUE
     )
-    private BasicField file;
+    private Field file;
 
 }

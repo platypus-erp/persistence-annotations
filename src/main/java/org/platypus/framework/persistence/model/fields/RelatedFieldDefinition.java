@@ -13,7 +13,7 @@ public @interface RelatedFieldDefinition {
     /**
      * The path to the value
      */
-    String[] value();
+    String[] path();
 
     Bool store() default Bool.DEFAULT;
 
