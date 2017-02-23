@@ -1,6 +1,6 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
-import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
+import org.platypus.framework.persistence.internal.api.GenericField;
 
 /**
  * TODO Add JavaDoc
@@ -9,5 +9,5 @@ import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableFloatField extends UnmutableGenericField<Float> {
+public interface LongField extends UnmutatableLongField, GenericField<Long> {
 }

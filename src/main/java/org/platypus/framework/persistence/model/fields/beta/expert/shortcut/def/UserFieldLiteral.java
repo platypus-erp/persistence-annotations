@@ -2,7 +2,6 @@ package org.platypus.framework.persistence.model.fields.beta.expert.shortcut.def
 
 import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.fields.Field;
-import org.platypus.framework.persistence.model.fields.RecordSet;
 import org.platypus.framework.persistence.model.fields.beta.expert.shortcut.BoolShortcutParameter;
 import org.platypus.framework.persistence.model.fields.beta.expert.shortcut.PlatypusShortcutRelation;
 
@@ -13,7 +12,7 @@ import org.platypus.framework.persistence.model.fields.beta.expert.shortcut.Plat
  * @version 0.1
  * @since 0.1
  */
-@PlatypusShortcutRelation(type = RecordSet.RelationType.ONE_TO_ONE, target = BaseModel.class)
+@PlatypusShortcutRelation(target = BaseModel.class)
 public interface UserFieldLiteral extends Field {
 
     @BoolShortcutParameter(defaultValue = BoolShortcutParameter.DefaultValue.TRUE)

@@ -1,5 +1,7 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
+import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
+
 import java.math.BigDecimal;
 
 /**
@@ -9,6 +11,5 @@ import java.math.BigDecimal;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableDecimalField {
-    BigDecimal get();
+public interface UnmutableDecimalField extends UnmutableGenericField<BigDecimal> {
 }

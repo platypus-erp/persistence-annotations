@@ -9,5 +9,5 @@ import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableFloatField extends UnmutableGenericField<Float> {
+public interface UnmutatableLongField extends UnmutableGenericField<Long> {
 }

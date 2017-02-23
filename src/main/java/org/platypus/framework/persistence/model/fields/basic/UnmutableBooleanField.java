@@ -1,5 +1,7 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
+import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
+
 /**
  * TODO Add JavaDoc
  *
@@ -7,6 +9,5 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableBooleanField {
-    boolean get();
+public interface UnmutableBooleanField extends UnmutableGenericField<Boolean> {
 }

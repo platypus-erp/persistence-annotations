@@ -29,5 +29,7 @@ public interface Record {
     void code(String code);
     void code(StringField code);
 
+    <T extends Record> T unWrap(Class<T> type);
+
 
 }

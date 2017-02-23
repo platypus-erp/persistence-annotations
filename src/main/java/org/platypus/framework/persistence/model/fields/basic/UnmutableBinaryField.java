@@ -1,5 +1,7 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
+import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
+
 /**
  * TODO Add JavaDoc
  *
@@ -7,7 +9,5 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableBinaryField {
-
-    byte[] get();
+public interface UnmutableBinaryField extends UnmutableGenericField<byte[]>{
 }

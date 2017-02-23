@@ -1,5 +1,7 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
+import org.platypus.framework.persistence.internal.api.GenericField;
+
 /**
  * TODO Add JavaDoc
  *
@@ -7,8 +9,5 @@ package org.platypus.framework.persistence.model.fields.basic;
  * @version 0.1
  * @since 0.1
  */
-public interface IntField extends UnmutableIntField{
-
-
-    void set(int value);
+public interface IntField extends UnmutableIntField, GenericField<Integer>{
 }

@@ -1,5 +1,7 @@
 package org.platypus.framework.persistence.model.fields.basic;
 
+import org.platypus.framework.persistence.internal.api.UnmutableGenericField;
+
 import java.time.LocalDate;
 
 /**
@@ -9,6 +11,5 @@ import java.time.LocalDate;
  * @version 0.1
  * @since 0.1
  */
-public interface UnmutableDateField {
-    LocalDate get();
+public interface UnmutableDateField extends UnmutableGenericField<LocalDate> {
 }

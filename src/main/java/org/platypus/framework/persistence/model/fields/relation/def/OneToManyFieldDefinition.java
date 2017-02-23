@@ -16,6 +16,13 @@ public @interface OneToManyFieldDefinition {
     Class<? extends BaseModel> value();
 
     /**
+     * The mapped relation in the target model
+     * @see OneToManyFieldDefinition#value()
+     * if unset then a coloumn will be created in this model.
+     */
+    String mappedBy() default DEFAULT;
+
+    /**
      * (Optional) <br> Define if this field can be updated<br>
      * The default value is equivalent to <code>true</code> if unset when the model will be generated<br>
      * when you inherit of a model the value will be define to the last value or <code>true</code>

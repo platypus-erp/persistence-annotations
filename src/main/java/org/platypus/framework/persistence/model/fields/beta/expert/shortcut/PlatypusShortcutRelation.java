@@ -1,7 +1,6 @@
 package org.platypus.framework.persistence.model.fields.beta.expert.shortcut;
 
 import org.platypus.framework.persistence.model.BaseModel;
-import org.platypus.framework.persistence.model.fields.RecordSet;
 
 /**
  * TODO Add JavaDoc
@@ -16,7 +15,6 @@ public @interface PlatypusShortcutRelation {
      */
     Class<? extends BaseModel> target();
 
-    RecordSet.RelationType type();
 
     boolean function() default false;
 }
