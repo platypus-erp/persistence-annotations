@@ -31,7 +31,7 @@ public class User implements BaseModel{
     )
     private Field password;
 
-    @OneToOneFieldDefinition(Document.class)
+    @OneToOneFieldDefinition(target = Document.class, mappedBy = "documentIds")
     private Field img;
 
     @ManyToOneFieldDefinition(Document.class)
@@ -40,6 +40,6 @@ public class User implements BaseModel{
     @ManyToManyFieldDefinition(Document.class)
     private Field imgMTM;
 
-    @OneToManyFieldDefinition(Document.class)
+    @OneToManyFieldDefinition(target = Document.class, mappedBy = "documentIds")
     private Field imgOTM;
 }

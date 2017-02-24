@@ -13,14 +13,13 @@ public @interface OneToManyFieldDefinition {
     /**
      * The target Platypus model for the relation
      */
-    Class<? extends BaseModel> value();
+    Class<? extends BaseModel> target();
 
     /**
      * The mapped relation in the target model
-     * @see OneToManyFieldDefinition#value()
-     * if unset then a coloumn will be created in this model.
+     * @see OneToManyFieldDefinition#target()
      */
-    String mappedBy() default DEFAULT;
+    String mappedBy();
 
     /**
      * (Optional) <br> Define if this field can be updated<br>

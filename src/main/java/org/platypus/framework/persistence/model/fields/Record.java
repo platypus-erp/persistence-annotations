@@ -1,35 +1,27 @@
 package org.platypus.framework.persistence.model.fields;
 
 
-import org.platypus.framework.persistence.model.fields.basic.DateTimeField;
-import org.platypus.framework.persistence.model.fields.basic.IntField;
-import org.platypus.framework.persistence.model.fields.basic.StringField;
-
-import java.time.LocalDateTime;
+import org.platypus.framework.persistence.model.fields.basic.LongField;
+import org.platypus.framework.persistence.model.fields.basic.UnmutableDateTimeField;
+import org.platypus.framework.persistence.model.fields.basic.UnmutableStringField;
 
 public interface Record {
 
-    IntField id();
-    void id(long id);
-    void id(IntField id);
+    LongField id();
+    void id(LongField id);
 
-    DateTimeField createDate();
-    void createDate(LocalDateTime createDate);
-    void createDate(DateTimeField createDate);
+    UnmutableDateTimeField createDate();
 
-    DateTimeField writeDate();
-    void writeDate(LocalDateTime createDate);
-    void writeDate(DateTimeField createDate);
+    UnmutableDateTimeField writeDate();
 
-    StringField displayName();
-    void displayName(String name);
-    void displayName(StringField name);
+    UnmutableStringField displayName();
 
-    StringField code();
-    void code(String code);
-    void code(StringField code);
-
-    <T extends Record> T unWrap(Class<T> type);
+    default <T extends Record> T unWrap(Class<T> type){
+        if (type != this.getClass()) {
+            throw new IllegalArgumentException("the unwrap type is wrong expected [" + this.getClass().getName() + "] actual [" + type.getName() + "]");
+        }
+        return (T) this;
+    }
 
 
 }
