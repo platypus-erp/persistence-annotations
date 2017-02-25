@@ -1,0 +1,79 @@
+=== @DateFieldDefinition
+.Sample
+[source, java, numbered]
+----
+package org.platypus.sample;
+
+import org.platypus.framework.persistence.model.BaseModel;
+import org.platypus.framework.persistence.model.PlatypusModel;
+import org.platypus.framework.persistence.model.fields.basic.BasicField;
+import org.platypus.framework.persistence.model.fields.basic.def.DateFieldDefinition;
+
+@PlatypusModel("my_model")
+public class MyModel implements BaseModel{
+
+    @DateFieldDefinition # <1>
+    private BasicField field; # <2>
+}
+----
+
+.Quick doc of @DateFieldDefinition
+[cols="1,1,1,1,9",options="header"]
+|===
+|Type |Name  |Required |Default value |Quick def
+
+|Bool
+|insertable
+|False
+|true
+|If this column can be inserted in the DB
+
+|Bool
+|updatable
+|False
+|true
+|If this column can be updated
+
+|String
+|columnDoc
+|False
+|None
+|The documentation in DB
+
+|String
+|uniqueHint
+|False
+|None
+|Create a unique constraint if set,
+same hint will be used to generate multiple unique constraint
+
+|boolean
+|eraseWithYours
+|False
+|-
+|Erase previous definition of this field with your definition
+
+|Bool
+|required
+|False
+|None
+|Constraint if this field can be unset
+
+|Bool
+|readonly
+|False
+|None
+|Constraint if the value of this field can be change
+
+|Bool
+|defaultToday
+|False
+|None
+|The default value will be today if unset (only apply before insert)
+
+|DateTimeRelative
+|relative
+|False
+|None
+|A constraint on the date checked before the insert
+|===

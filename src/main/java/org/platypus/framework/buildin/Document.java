@@ -1,4 +1,4 @@
-package org.platypus.framework.persistence.buildin;
+package org.platypus.framework.buildin;
 
 import org.platypus.framework.persistence.model.BaseModel;
 import org.platypus.framework.persistence.model.PlatypusModel;

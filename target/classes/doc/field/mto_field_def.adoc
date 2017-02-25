@@ -1,0 +1,78 @@
+=== @ManyToOneFieldDefinition
+.Sample
+[source, java, numbered]
+----
+package org.platypus.sample;
+
+import org.platypus.framework.persistence.model.BaseModel;
+import org.platypus.framework.persistence.model.PlatypusModel;
+import org.platypus.framework.persistence.model.fields.relation.RelationField;
+import org.platypus.framework.persistence.model.fields.basic.def.ManyToOneFieldDefinition;
+
+@PlatypusModel("my.model")
+public class MyModel implements BaseModel{
+
+    @ManyToOneFieldDefinition(TargetModel.class) # <1>
+    private RelationField field; # <2>
+}
+
+@PlatypusModel("target.model")
+public class TargetModel implements BaseModel{
+
+    // Fields
+}
+----
+
+.Quick doc of @ManyToOneFieldDefinition
+[cols="1,1,1,1,9",options="header"]
+|===
+|Type |Name  |Required |Default value |Quick def
+
+|Class<? extends BaseModel>
+|value
+|true
+|-
+|The target model of the relation
+
+|PlatypusCascadeType[]
+|cascade
+|false
+|None
+|if the action should be cascaded and how
+
+|String
+|where
+|false
+|None
+|A default where predicate add to the query
+
+|String
+|sortAsc
+|false
+|None
+|A default "order by field_name asc" add to the query
+
+|String
+|sortDesc
+|false
+|None
+|A default "order by field_name desc" add to the query
+
+|Bool
+|required
+|false
+|false
+|Constraint if this field can be unset
+
+|Bool
+|required
+|False
+|None
+|Constraint if this field can be unset
+
+|Bool
+|readonly
+|False
+|None
+|Constraint if the value of this field can be change
+|===

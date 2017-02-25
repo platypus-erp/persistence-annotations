@@ -1,4 +1,4 @@
-package org.platypus.framework.persistence.buildin;
+package org.platypus.framework.buildin;
 
 /**
  * TODO Add JavaDoc

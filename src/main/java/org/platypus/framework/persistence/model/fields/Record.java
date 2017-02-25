@@ -22,6 +22,4 @@ public interface Record {
         }
         return (T) this;
     }
-
-
 }
